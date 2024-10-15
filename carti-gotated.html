@@ -66,10 +66,10 @@
         }
 
         const params = new URLSearchParams(window.location.search);
-        const gameUrl = params.get('game');
+        const projectUrl = params.get('project'); // Changed from 'game' to 'project'
 
-        if (gameUrl) {
-            document.getElementById('gameFrame').src = gameUrl;
+        if (projectUrl) {
+            document.getElementById('gameFrame').src = projectUrl; // Use projectUrl
         }
     </script>
 </body>
