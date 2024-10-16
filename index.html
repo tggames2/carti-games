@@ -53,28 +53,9 @@
             visibility: hidden;
             margin-bottom: 20px;
         }
-
-        /* Particle canvas style */
-        #particles-js {
-            position: fixed; /* Fix to background */
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1; /* Ensure it's behind the content */
-        }
-
-        /* Ensure html and body take the full viewport height */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div> <!-- Particle effect container -->
-
     <nav>
         <img src="images/logo.png" alt="logo">
         <h1>CARTI GAMES</h1>
@@ -91,169 +72,55 @@
 
         <!-- Search Bar -->
         <div class="search-container">
-            <input type="text" id="gameSearch" placeholder="Search games..." oninput="filterGames()">
+            <input type="text" id="gameSearch" placeholder="Search games...">
         </div>
 
         <div id="games">
             <a href="carti-gotated.html?project=projects/updates/"><img src="projects/updates/updates-button.png" alt="updates"></a>
-            <a href="carti-gotated.html?project=projects/1v1lol/"><img src="projects/1v1lol/splash.png" alt="1v1lol"></a>
-            <a href="carti-gotated.html?project=projects/2048/"><img src="projects/2048/logo.png" alt="2048"></a>
-            <a href="carti-gotated.html?project=projects/baldis-basics/"><img src="projects/baldis-basics/splash.png" alt="baldis basics"></a>
-            <a href="carti-gotated.html?project=projects/basket-bros/"><img src="projects/basket-bros/thumb.jpg" alt="basket bros"></a>
-            <a href="carti-gotated.html?project=projects/bitlife/"><img src="projects/bitlife/logo.png" alt="bitlife"></a>
-            <a href="carti-gotated.html?project=projects/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"></a>
-            <a href="carti-gotated.html?project=projects/cookie-clicker/"><img src="projects/cookie-clicker/cookie1.jpeg" alt="cookie"></a>
-            <a href="carti-gotated.html?project=projects/crossyroad/"><img src="projects/crossyroad/crossyroad.png" alt="crossy road"></a>
-            <a href="carti-gotated.html?project=projects/doge_miner/"><img src="projects/doge_miner/img/dogeminer_300x300.png" alt="doge miner"></a>
-            <a href="carti-gotated.html?project=projects/drive-mad/"><img src="images/drive-mad.jpg" alt="drive mad"></a>
-            <a href="carti-gotated.html?project=projects/flappy-bird/"><img src="projects/flappy-bird/logo.jpeg" alt="flappy bird"></a>
-            <a href="carti-gotated.html?project=projects/justfall.lol/"><img src="projects/justfall.lol/unnamed.png" alt="justfall.lol"></a>
-            <a href="carti-gotated.html?project=projects/moto-x3m/"><img src="images/moto-x3m.jpg" alt="moto x3m"></a>
-            <a href="carti-gotated.html?project=projects/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
-            <a href="carti-gotated.html?project=projects/n-gon/"><img src="projects/n-gon/bot.png" alt="n-gon"></a>
-            <a href="carti-gotated.html?project=projects/paperio2/"><img src="projects/paperio2/images/icon512.png" alt="paper.io 2"></a>
-            <a href="carti-gotated.html?project=projects/retro-bowl/"><img src="images/retro-bowl.jpg" alt="retro bowl"></a>
-            <a href="carti-gotated.html?project=projects/slope/"><img src="images/slope.jpg" alt="slope"></a>
-            <a href="carti-gotated.html?project=projects/stickman-hook/"><img src="projects/stickman-hook/unnamed.jpg" alt="stickman hook"></a>
-            <a href="carti-gotated.html?project=projects/super-hot/"><img src="projects/super-hot/hot.jpg" alt="super hot"></a>
-            <a href="carti-gotated.html?project=projects/vex3/"><img src="images/vex3.jpg" alt="vex 3"></a>
-            <a href="carti-gotated.html?project=projects/vex4/"><img src="images/vex4.jpg" alt="vex 4"></a>
-            <a href="carti-gotated.html?project=projects/vex5/"><img src="images/vex5.jpg" alt="vex 5"></a>
-            <a href="carti-gotated.html?project=projects/vex6/"><img src="images/vex6.jpeg" alt="vex 6"></a>
-            <a href="carti-gotated.html?project=projects/vex7/"><img src="images/vex7.jpeg" alt="vex 7"></a>
+<a href="carti-gotated.html?project=projects/1v1lol/"><img src="projects/1v1lol/splash.png" alt="1v1lol"></a>
+<a href="carti-gotated.html?project=projects/2048/"><img src="projects/2048/logo.png" alt="2048"></a>
+<a href="carti-gotated.html?project=projects/baldis-basics/"><img src="projects/baldis-basics/splash.png" alt="baldis basics"></a>
+<a href="carti-gotated.html?project=projects/basket-bros/"><img src="projects/basket-bros/thumb.jpg" alt="basket bros"></a>
+<a href="carti-gotated.html?project=projects/bitlife/"><img src="projects/bitlife/logo.png" alt="bitlife"></a>
+<a href="carti-gotated.html?project=projects/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"></a>
+<a href="carti-gotated.html?project=projects/cookie-clicker/"><img src="projects/cookie-clicker/cookie1.jpeg" alt="cookie"></a>
+<a href="carti-gotated.html?project=projects/crossyroad/"><img src="projects/crossyroad/crossyroad.png" alt="crossy road"></a>
+<a href="carti-gotated.html?project=projects/doge_miner/"><img src="projects/doge_miner/img/dogeminer_300x300.png" alt="doge miner"></a>
+<a href="carti-gotated.html?project=projects/drive-mad/"><img src="images/drive-mad.jpg" alt="drive mad"></a>
+<a href="carti-gotated.html?project=projects/flappy-bird/"><img src="projects/flappy-bird/logo.jpeg" alt="flappy bird"></a>
+<a href="carti-gotated.html?project=projects/justfall.lol/"><img src="projects/justfall.lol/unnamed.png" alt="justfall.lol"></a>
+<a href="carti-gotated.html?project=projects/moto-x3m/"><img src="images/moto-x3m.jpg" alt="moto x3m"></a>
+<a href="carti-gotated.html?project=projects/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
+<a href="carti-gotated.html?project=projects/n-gon/"><img src="projects/n-gon/bot.png" alt="n-gon"></a>
+<a href="carti-gotated.html?project=projects/paperio2/"><img src="projects/paperio2/images/icon512.png" alt="paper.io 2"></a>
+<a href="carti-gotated.html?project=projects/retro-bowl/"><img src="images/retro-bowl.jpg" alt="retro bowl"></a>
+<a href="carti-gotated.html?project=projects/slope/"><img src="images/slope.jpg" alt="slope"></a>
+<a href="carti-gotated.html?project=projects/stickman-hook/"><img src="projects/stickman-hook/unnamed.jpg" alt="stickman hook"></a>
+<a href="carti-gotated.html?project=projects/super-hot/"><img src="projects/super-hot/hot.jpg" alt="super hot"></a>
+<a href="carti-gotated.html?project=projects/vex3/"><img src="images/vex3.jpg" alt="vex 3"></a>
+<a href="carti-gotated.html?project=projects/vex4/"><img src="images/vex4.jpg" alt="vex 4"></a>
+<a href="carti-gotated.html?project=projects/vex5/"><img src="images/vex5.jpg" alt="vex 5"></a>
+<a href="carti-gotated.html?project=projects/vex6/"><img src="images/vex6.jpeg" alt="vex 6"></a>
+<a href="carti-gotated.html?project=projects/vex7/"><img src="images/vex7.jpeg" alt="vex 7"></a>
+
+    
         </div>
     </div>
-    <h2>Credit to 3kh0 for the games!</h2>
-
-    <!-- Local Particle.js Script -->
-    <script src="particles.min.js"></script>
-
+   <h2>Credit to 3kh0 for the games!</h2>
     <script>
-        // Initialize particles.js
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 100,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 5,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "duration": 2,
-                        "opacity": 8,
-                        "size": 40
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
+        const input = document.getElementById('gameSearch');
+        const games = document.querySelectorAll('#games img');
 
-        // Search functionality
-        function filterGames() {
-            const searchInput = document.getElementById('gameSearch').value.toLowerCase();
-            const gameLinks = document.querySelectorAll('#games a');
-
-            gameLinks.forEach(link => {
-                const gameName = link.querySelector('img').alt.toLowerCase();
-                if (gameName.includes(searchInput)) {
-                    link.style.display = 'block'; // Show the game link
+        input.addEventListener('input', () => {
+            const searchTerm = input.value.toLowerCase();
+            games.forEach(game => {
+                if (game.alt.toLowerCase().includes(searchTerm)) {
+                    game.style.display = 'block';
                 } else {
-                    link.style.display = 'none'; // Hide the game link
+                    game.style.display = 'none';
                 }
             });
-        }
+        });
     </script>
 </body>
 </html>
