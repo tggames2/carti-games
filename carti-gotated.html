@@ -16,7 +16,7 @@
             overflow: hidden;
         }
 
-        .home-button, .mute-button {
+        .home-button {
             background-color: #ffffff;
             color: black;
             font-size: 16px;
@@ -25,21 +25,13 @@
             border-radius: 5px;
             cursor: pointer;
             position: absolute;
-            z-index: 1000;
-            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
-        }
-
-        .home-button {
             top: 10px;
             left: 10px;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+            z-index: 1000;
         }
 
-        .mute-button {
-            top: 10px;
-            left: 100px; /* Adjusted to place next to the home button */
-        }
-
-        .home-button:hover, .mute-button:hover {
+        .home-button:hover {
             background-color: #f0f0f0;
         }
 
@@ -63,32 +55,14 @@
 </head>
 <body>
     <button onclick="goHome()" class="home-button">🏠 Home</button>
-    <button onclick="toggleMute()" class="mute-button">🔊 Mute</button>
     
     <div class="game-container">
         <iframe id="gameFrame" src="" frameborder="0"></iframe>
     </div>
 
     <script>
-        let isMuted = false; // Mute state
-
         function goHome() {
             window.location.href = "/";
-        }
-
-        function toggleMute() {
-            isMuted = !isMuted;
-            const muteText = isMuted ? '🔇 Unmute' : '🔊 Mute';
-            document.querySelector('.mute-button').textContent = muteText;
-
-            const iframe = document.getElementById('gameFrame');
-            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-            // Mute all audio elements in the iframe
-            const audioElements = iframeDocument.getElementsByTagName('audio');
-            for (let audio of audioElements) {
-                audio.muted = isMuted; // Mute or unmute audio elements
-            }
         }
 
         const params = new URLSearchParams(window.location.search);
